@@ -9,6 +9,6 @@ namespace CrowdFunding.Models
     public class Honour
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int HonourId { get; set; }
+        public int Id { get; set; }
     }
 }

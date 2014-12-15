@@ -9,8 +9,9 @@ namespace CrowdFunding.Models
     public class Activity
     {
     
-        public int ActivityId { get; set; }
+        public int Id { get; set; }
         [StringLength(50)]
+        [Required]
         public string Name { get; set; }
         
    

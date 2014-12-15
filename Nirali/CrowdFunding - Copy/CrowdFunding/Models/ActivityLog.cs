@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace CrowdFunding.Models
 {
     public class ActivityLog
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public int ActivityId { get; set; }
         public int UserInfoId { get; set; }
         public int ProjectId { get; set; }

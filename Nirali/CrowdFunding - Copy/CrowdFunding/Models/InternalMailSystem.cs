@@ -9,11 +9,12 @@ namespace CrowdFunding.Models
     public class InternalMailSystem
     {
 
-        public int InternalMailSystemId { get; set; }
+        public int Id { get; set; }
         public int? UserInfofromId { get; set; }
         public int? UserInfoToId { get; set; }
         [StringLength(256)]
-        public string? Subject { get; set; }
+        public string Subject { get; set; }
+        [Required]
         public string Message { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public bool IsRead { get; set; }

@@ -7,7 +7,7 @@ namespace CrowdFunding.Models
 {
     public class Interest
     {
-        public int InterestId { get; set; }
+        public int Id { get; set; }
         public int UserInfoId { get; set; }
         public int CategoryId { get; set; }
     }

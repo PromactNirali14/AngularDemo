@@ -8,12 +8,12 @@ namespace CrowdFunding.Models
 {
     public class Currency
     {
-        public int CurrencyId { get; set; }
+        public int Id { get; set; }
         [StringLength(1)]
         [DataType(DataType.Currency)] //for currency format
-        public string? CurrencySymbol { get; set; }
+        public string CurrencySymbol { get; set; }
         [StringLength(20)]
-        public string? CurrencyName { get; set; }
+        public string CurrencyName { get; set; }
         public int MinimumFundingAmount { get; set; }
         public int MininumBakingAmount { get; set; }
 

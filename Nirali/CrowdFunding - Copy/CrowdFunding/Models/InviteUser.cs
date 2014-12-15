@@ -14,6 +14,7 @@ namespace CrowdFunding.Models
         public string Email { get; set; }
         public int UserInfoId { get; set; }
         [StringLength(40)]
+        [Required]
         public string RegistrationToken { get; set; }
         public bool IsRegistered { get; set; }
         public DateTime InvitationSendTime { get; set; }

@@ -10,10 +10,12 @@ namespace CrowdFunding.Models
     public class Country
     {
          [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CountryId { get; set; }
+        public int Id { get; set; }
         [StringLength(3)]
+        [Required]
         public string CountryCode { get; set; }
         [StringLength(50)]
+        [Required]
         public string CountryName { get; set; }
 
     }

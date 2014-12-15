@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace CrowdFunding.Models
 {
     public class AppSetting
     {
-        public int AppSettingId { get; set; }
+        public int Id { get; set; }
+        [Required]
         public string Key { get; set; }
+        [Required]
         public string value { get; set; }
+        [Required]
         public string Description { get; set; }
     }
 }

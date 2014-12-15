@@ -7,7 +7,7 @@ namespace CrowdFunding.Models
 {
     public class IMailRecipients
     {
-         public int IMailRecipientsId { get; set; }
+         public int Id { get; set; }
         public int MessageId { get; set; }
         public int ToUserId { get; set; }
         public bool IsRead { get; set; }
