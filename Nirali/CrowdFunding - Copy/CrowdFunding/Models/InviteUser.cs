@@ -8,7 +8,7 @@ namespace CrowdFunding.Models
 {
     public class InviteUser
     {
-        public int InviteUserTokenId { get; set; }
+        public int Id { get; set; }
         [StringLength(256)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

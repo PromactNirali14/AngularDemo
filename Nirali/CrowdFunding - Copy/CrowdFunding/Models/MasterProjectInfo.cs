@@ -8,7 +8,7 @@ namespace CrowdFunding.Models
 {
     public class MasterProjectInfo
     {
-        public int ProjectId { get; set; }
+        public int Id { get; set; }
         public int? CategoryId { get; set; }
         [StringLength(450)]
         public string Title { get; set; }

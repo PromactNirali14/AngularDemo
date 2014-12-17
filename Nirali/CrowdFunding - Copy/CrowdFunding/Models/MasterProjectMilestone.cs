@@ -8,7 +8,7 @@ namespace CrowdFunding.Models
 {
     public class MasterProjectMilestone
     {
-        public int ProjectMilestoneId { get; set; }
+        public int Id { get; set; }
         public int MasterProjectInfoId { get; set; }
         [Required]
         public string MileStoneTitle { get; set; }
