@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -29,7 +30,9 @@ namespace CrowdFunding.Models
         public int? CategoryId { get; set; }
        // [DataType(DataType.PhoneNumber)]
         public string ContactNo { get; set; }
+        [ForeignKey("UserType")]
         public int? UserTypeId { get; set; }
+        public virtual UserType UserType { get; set; }
         public int Status { get; set; }
         public string LoginType { get; set; }
         public string Interests { get; set; }
