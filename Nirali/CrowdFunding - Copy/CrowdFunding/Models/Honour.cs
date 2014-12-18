@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace CrowdFunding.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+        [Key]
+        [ForeignKey("ProcessInfo")]
         public int ProjectInfoId { get; set; }
+        public virtual ProjectInfo ProjectInfo { get; set; }
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }
@@ -22,11 +26,13 @@ namespace CrowdFunding.Models
         public int ShippingDetailsType { get; set; }
         public string ShippingCountries { get; set; }
         public bool IsHonourOwned { get; set; }
+       
         public int SlotType { get; set; }
+        
         public DateTime EstimatedDeliveryDate { get; set; }
         public string ShippingCost { get; set; }
 
-        
+      //  public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
         
     }
 }
