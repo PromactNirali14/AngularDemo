@@ -8,7 +8,7 @@ namespace CrowdFunding.Models
 {
     public class SurveyQuestion
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         [StringLength(100)]
         public string Question { get; set; }
         public int Status { get; set; }

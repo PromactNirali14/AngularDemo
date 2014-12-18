@@ -10,7 +10,7 @@ namespace CrowdFunding.Models
     public class ActivityLog
     {
         public int Id { get; set; }
-        [Key]
+        
         [ForeignKey("Activity")]
         public int ActivityId { get; set; }
         public virtual Activity Activity { get; set; }
@@ -19,7 +19,6 @@ namespace CrowdFunding.Models
         public int? ParnerId { get; set; }
         public int? ProjectUpdateId { get; set; }
         public DateTime TimeStamp { get; set; }
-        public virtual ICollection<Activity> Activity { get; set; }
-        
+       
     }
 }

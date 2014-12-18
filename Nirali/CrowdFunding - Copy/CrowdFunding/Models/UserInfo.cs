@@ -27,7 +27,7 @@ namespace CrowdFunding.Models
         public string ProfilePic { get; set; }
         public bool IsAllowAllMail { get; set; }
         public int? CategoryId { get; set; }
-        [DataType(DataType.PhoneNumber)]
+       // [DataType(DataType.PhoneNumber)]
         public string ContactNo { get; set; }
         public int? UserTypeId { get; set; }
         public int Status { get; set; }
@@ -54,6 +54,7 @@ namespace CrowdFunding.Models
         public string VanityURLName { get; set; }
         public bool IsVanityUrlChangeonce { get; set; }
                 [StringLength(10)]
+        
         public string ZipCode { get; set; }
         public DateTime LastViewedNotificationDateTime { get; set; }
         public string CompanyName { get; set; }

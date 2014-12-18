@@ -11,7 +11,9 @@ namespace CrowdFunding.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+        [ForeignKey("Category")]
         public int? CategoryId { get; set; }
+        public virtual Category Category { get; set; }
         [StringLength(450)]
         public string Title { get; set; }
         public string ShortDescription { get; set; }
@@ -29,7 +31,9 @@ namespace CrowdFunding.Models
         public string ProjectPicture { get; set; }
         public DateTime LaunchDate { get; set; }
         public int Status { get; set; }
+        [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
+        public virtual UserInfo userInfo { get; set; }
         public bool CommentFlag { get; set; }
         public int PercentageComplete { get; set; }
         public bool IsHundredPercentageFunded { get; set; }
@@ -41,7 +45,9 @@ namespace CrowdFunding.Models
         public DateTime ProjectFundingEndDate { get; set; }
         public bool IsApprovalStatusViewdByCreator { get; set; }
         public bool IsProjectCreatorSuspended { get; set; }
+        [ForeignKey("Currency")]
         public int CurrencyId { get; set; }
+        public virtual Currency Currency { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
 
         

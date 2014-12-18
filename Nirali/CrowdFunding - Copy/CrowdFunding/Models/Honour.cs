@@ -12,7 +12,7 @@ namespace CrowdFunding.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
-        [Key]
+        
         [ForeignKey("ProcessInfo")]
         public int ProjectInfoId { get; set; }
         public virtual ProjectInfo ProjectInfo { get; set; }
@@ -32,7 +32,7 @@ namespace CrowdFunding.Models
         public DateTime EstimatedDeliveryDate { get; set; }
         public string ShippingCost { get; set; }
 
-      //  public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
+     
         
     }
 }

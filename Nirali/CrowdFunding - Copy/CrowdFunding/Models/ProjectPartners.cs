@@ -11,8 +11,12 @@ namespace CrowdFunding.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+        [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
+        public virtual ProjectInfo ProjectInfo { get; set; }
+        [ForeignKey("UserInfo")]
         public int? PartnersUserId { get; set; }
+        public virtual UserInfo userInfo { get; set; }
         [DataType(DataType.EmailAddress)]
         [Required]
         public string PartnersEmailId { get; set; }

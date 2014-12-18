@@ -18,7 +18,7 @@ namespace CrowdFunding.Models
        [ForeignKey("Category")]
         public int? ParentcategoryId { get; set; }
        
-        public int status { get; set; }
+        public int Status { get; set; }
         
         public string CategoryImage { get; set; }
     }

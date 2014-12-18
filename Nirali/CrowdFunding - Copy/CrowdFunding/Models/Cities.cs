@@ -9,13 +9,13 @@ namespace CrowdFunding.Models
 {
     public class Cities
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         [Required]
-        public string City_Name { get; set; }
-        [Key]
+        public string CityName { get; set; }
+        
         [ForeignKey("Students")]
         public int StudentId { get; set; }
-        public virtual ICollection<Students> Students { get; set; }
-       public virtual Students Students { get; set; }
+     
+      public virtual Students Students { get; set; }
     }
 }

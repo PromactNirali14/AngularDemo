@@ -11,7 +11,9 @@ namespace CrowdFunding.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+        [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
+        public virtual ProjectInfo ProjectInfo { get; set; }
         [Required]
         public string MileStoneTitle { get; set; }
         [Required]

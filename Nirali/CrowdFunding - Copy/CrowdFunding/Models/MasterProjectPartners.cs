@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,8 +10,12 @@ namespace CrowdFunding.Models
     public class MasterProjectPartners
     {
         public int Id { get; set; }
+        [ForeignKey("MasterProjectInfo")]
         public int MasterProjectInfoId { get; set; }
+        public virtual MasterProjectInfo MasterProjectInfo { get; set; } 
+        [ForeignKey("UserInfo")]
         public int? PartnersUserId { get; set; }
+        public virtual UserInfo UserInfo { get; set; }
         [Required]
         public string PartnersEmailId { get; set; }
         [Required]

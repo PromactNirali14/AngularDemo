@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,7 +10,9 @@ namespace CrowdFunding.Models
     public class MasterProjectInfo
     {
         public int Id { get; set; }
+        [ForeignKey("Category")]
         public int? CategoryId { get; set; }
+        public virtual Category Category { get; set; }
         [StringLength(450)]
         public string Title { get; set; }
         public string ShortDescription { get; set; }
@@ -27,6 +30,7 @@ namespace CrowdFunding.Models
         public string ProjectPicture { get; set; }
         public DateTime? LaunchDate { get; set; }
         public int Status { get; set; }
+        [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
         public bool CommentFlag { get; set; }
         public int PercentageComplete { get; set; }
@@ -38,7 +42,9 @@ namespace CrowdFunding.Models
         public string StateName { get; set; }
         public string CityName { get; set; }
         public bool IsChangesApproved { get; set; }
+        [ForeignKey("Currency")]
         public int CurrencyId { get; set; }
+        public virtual Currency currency { get; set; }
         public DateTime? LastSubmittedDate { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
         public bool IsAnySavedChangesPendingToLaunch { get; set; }
