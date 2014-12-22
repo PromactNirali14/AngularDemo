@@ -7,7 +7,7 @@ using System.Web;
 
 namespace CrowdFunding.Models
 {
-    public class SocialNetworkinfo
+    public class SocialNetworkInfo
     {
         public int Id { get; set; }
         [Required]

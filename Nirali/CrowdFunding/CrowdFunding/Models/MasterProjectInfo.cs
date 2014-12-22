@@ -45,7 +45,7 @@ namespace CrowdFunding.Models
         public bool IsChangesApproved { get; set; }
         [ForeignKey("Currency")]
         public int CurrencyId { get; set; }
-        public virtual Currency currency { get; set; }
+        public virtual Currency Currency { get; set; }
         public DateTime? LastSubmittedDate { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
         public bool IsAnySavedChangesPendingToLaunch { get; set; }

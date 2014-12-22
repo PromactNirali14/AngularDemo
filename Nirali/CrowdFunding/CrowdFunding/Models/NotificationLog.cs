@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CrowdFunding.Models
 {
-    public class _NotificationLog
+    public class NotificationLog
     {
         public int Id { get; set; }
         public int NotificationId { get; set; }
