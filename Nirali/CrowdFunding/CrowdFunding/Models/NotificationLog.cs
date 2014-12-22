@@ -26,7 +26,9 @@ namespace CrowdFunding.Models
         public int? PledgedAmount { get; set; }
         [DataType(DataType.Currency)]
         public string CurrencySymbol { get; set; }
-        public virtual Notification Notification{get;set;}
+
+
+        public virtual ICollection<Notification> Notification {get;set;}
 
     }
 }

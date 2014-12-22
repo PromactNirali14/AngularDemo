@@ -8,12 +8,11 @@ using System.Web;
 namespace CrowdFunding.Models
 {
     public class ProjectInfo
-    {
+    {   [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [ForeignKey("Category")]
         public int? CategoryId { get; set; }
-        public virtual Category Category { get; set; }
         [StringLength(450)]
         public string Title { get; set; }
         public string ShortDescription { get; set; }
@@ -33,7 +32,6 @@ namespace CrowdFunding.Models
         public int Status { get; set; }
         [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         public bool CommentFlag { get; set; }
         public int PercentageComplete { get; set; }
         public bool IsHundredPercentageFunded { get; set; }
@@ -47,10 +45,17 @@ namespace CrowdFunding.Models
         public bool IsProjectCreatorSuspended { get; set; }
         [ForeignKey("Currency")]
         public int CurrencyId { get; set; }
-        public virtual Currency Currency { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
 
-        
+
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
+        public virtual ICollection<Honour> Honours { get; set; }
+        public virtual Currency Currency { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual ICollection<ProjectComment> ProjectComment { get; set; }
+        public virtual ICollection<ProjectMilestone> ProjectMilestone { get; set; }
+        public virtual ICollection<ProjectPartners> ProjectPartners { get; set; }
+        public virtual ICollection<ProjectUpdates> ProjectUpdates { get; set; }
 
     }
 }

@@ -12,13 +12,15 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("MasterProjectInfo")]
         public int MasterProjectInfoId { get; set; }
-        public virtual MasterProjectInfo MasterProjectInfo { get; set; } 
         [Required]
         public string MileStoneTitle { get; set; }
         [Required]
         public string Description { get; set; }
         public string Challenges { get; set; }
         public DateTime CompletionDate { get; set; }
+
+
+        public virtual MasterProjectInfo MasterProjectInfo { get; set; } 
 
 
     }

@@ -12,12 +12,12 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectUpdates")]
         public int ProjectUpdatesId { get; set; }
-        public virtual ProjectUpdates ProjectUpdates { get; set; }
         public int UserInfoId { get; set; }
-       
         [Required]
         public string Comment { get; set; }
         public DateTime CreatedDateTime { get; set; }
 
+        public virtual ProjectUpdates ProjectUpdates { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
     }
 }

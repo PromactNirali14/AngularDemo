@@ -12,8 +12,6 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("MasterProjectInfo")]
         public int MasterProjectInfoId { get; set; }
-        public virtual MasterProjectInfo MasterProjectInfo { get; set; }
-
         [Required]
         public string Title { get; set; }
         [Required]
@@ -30,6 +28,9 @@ namespace CrowdFunding.Models
         public DateTime EstimatedDeliveryDate { get; set; }
         [Required]
         public string ShippingCost { get; set; }
+
+
+        public virtual MasterProjectInfo MasterProjectInfo { get; set; }
 
     }
 }

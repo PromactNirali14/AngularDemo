@@ -10,7 +10,6 @@ namespace CrowdFunding.Models
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
-       // public virtual ProjectInfo ProjectInfo { get; set; }
         public int AccountType { get; set; }
         public string BankName { get; set; }
         public string AccountName { get; set; }
@@ -19,6 +18,8 @@ namespace CrowdFunding.Models
         [DataType(DataType.EmailAddress)]
         public string PaypalEmailId { get; set; }
         public string WireExtraDetails { get; set; }
+
+         public virtual ProjectInfo ProjectInfo { get; set; }
 
 
     }

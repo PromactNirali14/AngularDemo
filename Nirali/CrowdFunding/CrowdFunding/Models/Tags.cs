@@ -19,6 +19,8 @@ namespace CrowdFunding.Models
         [DefaultValue(value: 0)]
         [ForeignKey("MasterProjectInfo")]
         public int? ProjectId { get; set; }
+
+
         public virtual MasterProjectInfo MasterProjectInfo { get; set; }
 
     }

@@ -13,6 +13,6 @@ namespace CrowdFunding.Models
         public string Question { get; set; }
         public int Status { get; set; }
 
-       
+        public virtual ICollection<SurveyAnswer> SurveyAnswer { get; set; }
     }
 }

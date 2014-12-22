@@ -12,10 +12,8 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("MasterProjectInfo")]
         public int MasterProjectInfoId { get; set; }
-        public virtual ICollection<MasterProjectInfo> MasterProjectInfo { get; set; } 
         [ForeignKey("UserInfo")]
         public int? PartnersUserId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         [Required]
         public string PartnersEmailId { get; set; }
         [Required]
@@ -24,5 +22,9 @@ namespace CrowdFunding.Models
         public DateTime? TokenSendingTimeStamp { get; set; }
         public Guid? Token { get; set; }
         public int PartnerRequestStatus { get; set; }
+
+
+        public virtual ICollection<MasterProjectInfo> MasterProjectInfo { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
     }
 }

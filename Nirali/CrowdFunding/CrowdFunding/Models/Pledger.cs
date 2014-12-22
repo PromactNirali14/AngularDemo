@@ -12,16 +12,12 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("UserInfo")]
         public int? UserInfoId { get; set; }
-        public virtual UserInfo UserInfo { get; set; }
-             
-
         public int PledgedAmount { get; set; }
         public int CurrencyCodeId { get; set; }
         [Required]
         public string ShippingAddress { get; set; }
          [ForeignKey("Honour")]
         public int HonourId { get; set; }
-         public virtual Honour Honour { get; set; }
         public int ProjectInfoId { get; set; }
         public DateTime CreatedDateTime { get; set; }
         [Required]
@@ -39,6 +35,9 @@ namespace CrowdFunding.Models
         public string ZipCode { get; set; }
         public bool IsPaymentDone { get; set; }
         public bool GoAnonymous { get; set; }
+
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
+        public virtual Honour Honour { get; set; }  
 
 
     }

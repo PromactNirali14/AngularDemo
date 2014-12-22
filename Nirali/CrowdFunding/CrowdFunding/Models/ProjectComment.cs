@@ -12,20 +12,21 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
-        public virtual ProjectInfo ProjectInfo { get; set; }
         [Required]
         public string Comment { get; set; }
         [ForeignKey("UserInfo")]
         public int? UserInfoId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         public DateTime? CreatedDateTime { get; set; }
-       // [ForeignKey("ProjectComment")]
+        [ForeignKey("ProjectComment")]
         public int? ParentCommentId { get; set; }
-        public virtual ProjectComment ProjectComments { get; set; }
         public int Status { get; set; }
         public int ParentReplyCommentId { get; set; }
         public int ParentReplyUserId { get; set; }
 
+
+        public virtual ProjectInfo ProjectInfo { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
+        public virtual ICollection<ProjectComment> ProjectComments { get; set; }
 
     }
 }

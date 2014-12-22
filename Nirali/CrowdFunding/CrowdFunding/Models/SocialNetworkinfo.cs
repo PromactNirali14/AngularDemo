@@ -15,7 +15,8 @@ namespace CrowdFunding.Models
         public string UserName { get; set; }
         [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         public string AccessToken { get; set; }
+
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
     }
 }

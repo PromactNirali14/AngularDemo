@@ -12,7 +12,6 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("Category")]
         public int? CategoryId { get; set; }
-        public virtual Category Category { get; set; }
         [StringLength(450)]
         public string Title { get; set; }
         public string ShortDescription { get; set; }
@@ -32,7 +31,6 @@ namespace CrowdFunding.Models
         public int Status { get; set; }
         [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         public bool CommentFlag { get; set; }
         public int PercentageComplete { get; set; }
         public bool IsPublished { get; set; }
@@ -45,16 +43,17 @@ namespace CrowdFunding.Models
         public bool IsChangesApproved { get; set; }
         [ForeignKey("Currency")]
         public int CurrencyId { get; set; }
-        public virtual Currency Currency { get; set; }
         public DateTime? LastSubmittedDate { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
         public bool IsAnySavedChangesPendingToLaunch { get; set; }
 
 
-        
-        
 
-
+        public virtual ICollection<MasterHonour> MasterHonours { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
+        public virtual Currency Currency { get; set; }
+        public virtual ICollection<MasterProjectMilestone> MasterProjectMilestone { get; set; }
 
 
 

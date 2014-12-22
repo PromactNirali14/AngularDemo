@@ -9,13 +9,12 @@ using System.Web;
 namespace CrowdFunding.Models
 {
     public class Honour
-    {
+    {   [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         
         [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
-        public virtual ProjectInfo ProjectInfo { get; set; }
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }
@@ -26,11 +25,12 @@ namespace CrowdFunding.Models
         public int ShippingDetailsType { get; set; }
         public string ShippingCountries { get; set; }
         public bool IsHonourOwned { get; set; }
-       
         public int SlotType { get; set; }
-        
         public DateTime EstimatedDeliveryDate { get; set; }
         public string ShippingCost { get; set; }
+
+
+        public virtual ProjectInfo ProjectInfo { get; set; }
 
      
         

@@ -14,11 +14,11 @@ namespace CrowdFunding.Models
         [Required]
         public string Message { get; set; }
         [ForeignKey("UserInfo")]
-        public int FromUserId { get; set; }
-        public virtual UserInfo UserInfo { get; set; }
-  
+        public int FromUserId { get; set; }        
         public bool IsBlockedSentItem { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime CreatedDateTime { get; set; }
+
+        public virtual UserInfo UserInfo { get; set; }
     }
 }

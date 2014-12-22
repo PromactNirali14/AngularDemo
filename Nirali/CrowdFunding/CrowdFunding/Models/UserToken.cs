@@ -26,6 +26,9 @@ namespace CrowdFunding.Models
         public string ExternalLoginData { get; set; }
         public string AccessToken { get; set; }
 
+        public virtual UserInfo UserInfo { get; set; }
+
+
         
     }
 }

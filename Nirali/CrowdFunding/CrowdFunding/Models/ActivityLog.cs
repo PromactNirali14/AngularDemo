@@ -13,12 +13,14 @@ namespace CrowdFunding.Models
         
         [ForeignKey("Activity")]
         public int ActivityId { get; set; }
-        public virtual Activity Activity { get; set; }
+        
         public int UserInfoId { get; set; }
         public int ProjectId { get; set; }
         public int? ParnerId { get; set; }
         public int? ProjectUpdateId { get; set; }
         public DateTime TimeStamp { get; set; }
+
+        public virtual ICollection<Activity> Activity { get; set; }
         
        
     }

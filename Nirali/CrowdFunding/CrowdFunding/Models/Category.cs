@@ -15,13 +15,19 @@ namespace CrowdFunding.Models
         [Required]
         public string CategoryName { get; set; }
         
-      
+        [ForeignKey("Category")]
         public int? ParentcategoryId { get; set; }
-       public virtual Category Categories { get; set; }
-
-       
+      
         public int Status { get; set; }
         
         public string CategoryImage { get; set; }
+
+
+        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
+        public virtual ICollection<MasterProjectInfo> MasterProjectInfo { get; set; }
     }
+     
+
+       
 }

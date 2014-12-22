@@ -19,7 +19,9 @@ namespace CrowdFunding.Models
         public bool IsRegistered { get; set; }
         public DateTime InvitationSendTime { get; set; }
         public DateTime RegistrationTime { get; set; }
-        public virtual UserInfo UserInfo { get; set; }
+
+
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
 
     }
 }

@@ -14,8 +14,6 @@ namespace CrowdFunding.Models
         public int Id { get; set; } 
         [ForeignKey("UserInfo")]
         public int? UserInfofromId { get; set; }
-        public virtual UserInfo UserInfo { get; set; }
-
         public int? UserInfoToId { get; set; }
         [StringLength(256)]
         public string Subject { get; set; }
@@ -28,6 +26,10 @@ namespace CrowdFunding.Models
         
         public bool BlockSentItem { get; set; }
         public bool IsViewed { get; set; }
+
+
+        public virtual UserInfo UserInfo { get; set; }
+
 
 
     }

@@ -13,10 +13,8 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
-        public virtual ProjectInfo ProjectInfo { get; set; }
         [ForeignKey("UserInfo")]
         public int? PartnersUserId { get; set; }
-        public virtual ICollection<UserInfo> UserInfo { get; set; }
         [DataType(DataType.EmailAddress)]
         [Required]
         public string PartnersEmailId { get; set; }
@@ -24,6 +22,9 @@ namespace CrowdFunding.Models
         public string PartnersRole { get; set; }
         public DateTime CreatedDateTime { get; set; }
 
+
+        public virtual ProjectInfo ProjectInfo { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
 
     }
 }

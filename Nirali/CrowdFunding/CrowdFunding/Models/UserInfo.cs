@@ -23,8 +23,7 @@ namespace CrowdFunding.Models
         public string AboutText { get; set; }
         [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }
-        public int? Gender { get; set; }
-        
+        public int? Gender { get; set; }        
         public string ProfilePic { get; set; }
         public bool IsAllowAllMail { get; set; }
         public int? CategoryId { get; set; }
@@ -32,11 +31,9 @@ namespace CrowdFunding.Models
         public string ContactNo { get; set; }
         [ForeignKey("UserType")]
         public int? UserTypeId { get; set; }
-        public virtual UserType UserType { get; set; }
         public int Status { get; set; }
-        public string LoginType { get; set; }
+        public string LoginType { get; set; }        
         public string Interests { get; set; }
-        public virtual ICollection<Interest> Interest { get; set; }
         public bool WhenSomeOneIfollowBacksOrLaunchesAProject { get; set; } 
         public bool WhenIGetNewFollower { get; set; }
         public bool WhenCreatedProjectReceiveNewPledge { get; set; }
@@ -57,8 +54,7 @@ namespace CrowdFunding.Models
         [StringLength(30)]
         public string VanityURLName { get; set; }
         public bool IsVanityUrlChangeonce { get; set; }
-                [StringLength(10)]
-        
+         [StringLength(10)]
         public string ZipCode { get; set; }
         public DateTime LastViewedNotificationDateTime { get; set; }
         public string CompanyName { get; set; }
@@ -69,7 +65,12 @@ namespace CrowdFunding.Models
         public DateTime? LastEditedByAdmin { get; set; }
 
 
+        public virtual ICollection<IMailMessages> IMailMessages { get; set; }
+        public virtual ICollection<IMailRecipients> IMailRecipients { get; set; }
+        public virtual UserType UserType { get; set; }
+        public virtual ICollection<UserWebSite> UserWebSites { get; set; }
 
+        
 
 
     }

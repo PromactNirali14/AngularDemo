@@ -10,6 +10,7 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         public int UserInfoId { get; set; }
         public int FollowerUserInfoId { get; set; }
+
         public virtual ICollection<UserInfo> UserInfo { get; set; }
     }
 }

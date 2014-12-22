@@ -11,12 +11,13 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectInfo")]
         public int ProjectId { get; set; }
-        public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
-        public virtual Category Category { get; set; }
         public DateTime ScheduleStartDate { get; set; }
         public DateTime ScheduleEndDate { get; set; }
+
+        public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
+        public virtual Category Category { get; set; }
 
     }
 }

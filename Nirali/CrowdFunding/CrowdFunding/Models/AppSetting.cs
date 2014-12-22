@@ -12,7 +12,7 @@ namespace CrowdFunding.Models
         [Required]
         public string Key { get; set; }
         [Required]
-        public string value { get; set; }
+        public string Value { get; set; }
         [Required]
         public string Description { get; set; }
     }

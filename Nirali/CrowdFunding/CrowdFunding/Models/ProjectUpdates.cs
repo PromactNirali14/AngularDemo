@@ -12,7 +12,6 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
-        public virtual ProjectInfo ProjectInfo { get; set; }
         public int UserInfoId { get; set; }
         [Required]
         [StringLength(140)]
@@ -20,6 +19,8 @@ namespace CrowdFunding.Models
         [Required]
         public string UpdateDescription { get; set; }
         public DateTime CreatedDateTime { get; set; }
+
+        public virtual ProjectInfo ProjectInfo { get; set; }
 
     }
 }

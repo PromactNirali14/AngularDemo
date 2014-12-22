@@ -19,8 +19,6 @@ namespace CrowdFunding.Models
         public string OtherIdentityType2Document { get; set; }
         [ForeignKey("UserInfo")]
         public int UserInfoId { get; set; }
-        public virtual UserInfo UserInfo { get; set; }
-
         [StringLength(14)]
         public string UIDAINumber { get; set; }
         public int IdentityVerificationStatus { get; set; }
@@ -28,6 +26,7 @@ namespace CrowdFunding.Models
         public int OtherIdentityTypeForCompanyProfile2 { get; set; }
         public DateTime? LastEditedByAdmin { get; set; }
 
+        public virtual UserInfo UserInfo { get; set; }
 
     }
 }

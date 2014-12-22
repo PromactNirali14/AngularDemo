@@ -12,13 +12,15 @@ namespace CrowdFunding.Models
         public int Id { get; set; }
         [ForeignKey("ProjectInfo")]
         public int ProjectId { get; set; }
-        public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
         public int UserId { get; set; }
         public int SelectedReason { get; set; }
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
         public bool? IsApprovedByAdmin { get; set; }
+
+        public virtual ICollection<ProjectInfo> ProjectInfo { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; }
 
 
     }

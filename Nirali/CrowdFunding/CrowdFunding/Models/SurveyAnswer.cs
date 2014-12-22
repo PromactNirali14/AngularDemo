@@ -15,13 +15,16 @@ namespace CrowdFunding.Models
         public string Answer { get; set; }
         [ForeignKey("UserInfo")]
         public int? UserInfoId { get; set; }
-        public virtual UserInfo UserInfo { get; set;} 
         [ForeignKey("ProjectInfo")]
         public int ProjectInfoId { get; set; }
-         public virtual ProjectInfo ProjectInfo { get; set; }
         [ForeignKey("SurveyQuestion")]
         public int SurveyQuestionId { get; set; }
+
+
+
         public virtual SurveyQuestion SurveyQuestion { get; set; }
+        public virtual ProjectInfo ProjectInfo { get; set; }
+        public virtual ICollection<UserInfo> UserInfo { get; set; } 
 
     }
 }

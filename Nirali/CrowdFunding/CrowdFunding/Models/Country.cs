@@ -9,7 +9,7 @@ namespace CrowdFunding.Models
 {
     public class Country
     {   [Key]
-         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [StringLength(3)]
         [Required]
@@ -17,7 +17,8 @@ namespace CrowdFunding.Models
         [StringLength(50)]
         [Required]
         public string CountryName { get; set; }
-        public virtual ICollection<Cities> Cities { get; set; }
+
+        public virtual ICollection<City> Cities { get; set; }
         public virtual ICollection<State> States { get; set; }
     }
 }

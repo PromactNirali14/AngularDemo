@@ -10,12 +10,14 @@ namespace CrowdFunding.Models
     public class State
     {      
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
+         public int Id { get; set; }
          [Required]
          [StringLength(50)]
          public string StateName { get; set; }
         [ForeignKey("Country")]
          public int CountryId { get; set; }
+
+
         public virtual Country Country { get; set; }
 
 

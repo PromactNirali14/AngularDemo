@@ -15,8 +15,9 @@ namespace CrowdFunding.Models
         
         [ForeignKey("Students")]
         public int StudentId { get; set; }
+
      
-      public virtual Students Students { get; set; }
+      public virtual ICollection<Students> Students { get; set; }
      
       }
 }
