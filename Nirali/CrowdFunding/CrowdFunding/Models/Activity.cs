@@ -13,7 +13,7 @@ namespace CrowdFunding.Models
         [StringLength(50)]
         [Required]
         public string Name { get; set; }
-        
+        public virtual ICollection<ActivityLog> ActivityLogs { get; set; } 
    
     }
 }

@@ -20,7 +20,7 @@ namespace CrowdFunding.Models
         public int? ProjectUpdateId { get; set; }
         public DateTime TimeStamp { get; set; }
 
-        public virtual ICollection<Activity> Activity { get; set; }
+        public virtual Activity Activity { get; set; }
         
        
     }
