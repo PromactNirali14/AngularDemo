@@ -17,7 +17,7 @@ namespace CrowdFunding.Models
         [ForeignKey("UserInfo")]
         public int? UserInfoId { get; set; }
         public DateTime? CreatedDateTime { get; set; }
-        [ForeignKey("ProjectComment")]
+       // [ForeignKey("ProjectComment")]
         public int? ParentCommentId { get; set; }
         public int Status { get; set; }
         public int ParentReplyCommentId { get; set; }
@@ -26,7 +26,6 @@ namespace CrowdFunding.Models
 
         public virtual ProjectInfo ProjectInfo { get; set; }
         public virtual ICollection<UserInfo> UserInfo { get; set; }
-        public virtual ICollection<ProjectComment> ProjectComments { get; set; }
-
+      
     }
 }
