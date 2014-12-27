@@ -1,0 +1,36 @@
+﻿
+
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/MyNoteApp.js"></script>
+<script src="Scripts/MyNoteCtrl.js"></script>
+
+
+<html ng-app="MyNoteApp">
+
+<head>
+    <title> Demo Application Of Angular :</title>
+    
+</head>
+
+<body>
+
+    <div ng-controller="MyNoteCtrl">
+        <p>
+            Name:<input type="text" ng-model="Name" />
+            
+        </p>
+        <p> Hello {{ Name}}..!!</p>
+        
+        <p><textarea ng-model="message" cols="40" rows="10"></textarea></p>
+
+        <p>
+            <button ng-click="save()">Save</button>
+            <button ng-click="clear()">Clear</button>
+        </p>
+
+        <p>Number of characters left: <span ng-bind="left()"></span></p>
+        <p> My Message is : {{ message}} </p>
+    </div>
+    
+</body>
+</html>
